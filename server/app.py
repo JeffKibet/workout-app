@@ -25,7 +25,7 @@ def create_workout():
 
 @app.route('/workouts/<int:id>', methods=['DELETE'])
 def delete_workout(id):
-    return make_response(jsonify({'message': f'delete workout {id}'}), 200)
+    return make_response('', 204)
 
 @app.route('/exercises', methods=['GET'])
 def list_exercises():
@@ -41,7 +41,7 @@ def create_exercise():
 
 @app.route('/exercises/<int:id>', methods=['DELETE'])
 def delete_exercise(id):
-    return make_response(jsonify({'message': f'delete exercise {id}'}), 200)
+    return make_response('', 204)
 
 @app.route(
     '/workouts/<int:workout_id>/exercises/<int:exercise_id>/workout_exercises',
